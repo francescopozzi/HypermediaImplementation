@@ -100,6 +100,12 @@ img.principale {
 
 }
 
+.divFiltro{
+    margin: auto;
+    margin-top: 0px;
+    padding: 10px;
+}
+
 .azzurro{
     background: lightblue;
 }
@@ -214,6 +220,14 @@ span{
     left: 30%;
 }
 
+.filtro{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    width: 100%;
+    margin: auto;
+    
+}
+
 .centrato{
     display: -webkit-inline-flex;
     display: inline-flex;
@@ -237,6 +251,16 @@ span{
     text-align: center;
     
 }
+
+.submit{
+    width: 60px;
+    height: 30px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
 
 .titoloPagina{
     font-size: 40px;
