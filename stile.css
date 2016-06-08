@@ -1,6 +1,6 @@
 body{
     margin:0;
-    min-width: 980px;
+    min-width: 1100px;
 }
 
 div.bordi{
@@ -24,7 +24,8 @@ div#bordoInf {
     bottom:0px;
     left:0px;
     color: white;
-    font-weight: bold
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 
@@ -49,7 +50,6 @@ img#logo{
 }
 
 #registrazione{
-    
     color:orange;
     margin: 0px;
 }
@@ -65,26 +65,40 @@ img#puntoDiDomanda{
 
 
 div#immagine{
-    display: -webkit-flex;
-    display: flex;
-    background: blue;
     width: 75%;
     margin: auto;
     
 }
 
-img.fotoHome{
-    margin: auto;
-}
 
 img.principale {
     width: 100%;
     height: auto;
 }
 
+.contenuto{
+     display: -webkit-inline-flex;
+    display: inline-flex;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    
+    background: red;
+
+}
+
+.striscia{
+     display: -webkit-inline-flex;
+    display: inline-flex; 
+    width: 50%;
+    margin: auto;
+    background: yellow;
+}
+
+
 div#primaStriscia{
-    display: -webkit-flex;
-    display: flex;
+    display: -webkit-inline-flex;
+    display: inline-flex;
     width: 50%;
     background: yellow;
     margin: auto;
@@ -92,35 +106,33 @@ div#primaStriscia{
 }
 
 div#secondaStriscia{
-    display: -webkit-flex;
-    display: flex;
+    display: -webkit-inline-flex;
+    display: inline-flex;
     width: 50%;
     background: green;
     margin: auto;
     
 }
 div#contenuto1{
-    display: -webkit-flex;
-    display: flex;
+    display: -webkit-inline-flex;
+    display: inline-flex;
     border-style: solid;
     border-color: red;
     border-width: thin;
     background: lightblue;
     width: 20%;
-    margin: auto;
     
     
 }
 
 div#contenuto2{
-    display: -webkit-flex;
-    display: flex;
+    display: -webkit-inline-flex;
+    display: inline-flex;
     border-style: solid;
     border-color: lightblue;
     border-width: thin;
     background: pink;
     width: 20%;
-    margin: auto;
     
     
 }
@@ -136,5 +148,13 @@ h1.huawei {
 
 
 h1.landmarks {
-    color:white;
+    min-width: 145px;
+}
+
+.bianco{
+     color: white;
+}
+
+a{
+    text-decoration: none;
 }
