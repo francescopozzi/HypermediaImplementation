@@ -178,14 +178,73 @@ span{
     margin-left: 10px;
 }
 
+.promozione{
+    width: 80%;
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    align-content: center;
+    
+}
 
+.imgPromozione{
+    width: 50%;
+    height: auto;
+    position: relative;
+    left: 25%;
+    margin-top: 10px;
+}
+
+.categorieDispositivi{
+    display: -webkit-inline-block;
+    display: inline-block;
+    padding: 10px;
+    margin: auto;
+    min-width: 250px;
+    width: 20%
+    
+}
+
+.imgCategorieDispositivi{
+    width: 100px;
+    height: 130px;
+    min-width: 100px;
+    min-height: 130px;
+    position: relative;
+    left: 30%;
+}
+
+.centrato{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    width: 100%;
+    
+}
 .rosso {
     color:red;
 }
 
 
-h1.landmarks {
+.landmarks {
     min-width: 145px;
+}
+
+.blu{
+    color: blue;
+}
+
+.centro{
+    text-align: center;
+    
+}
+
+.titoloPagina{
+    font-size: 40px;
+    margin: 0px;
+}
+
+.sfondoGrigio{
+    background-color: lightgrey;
 }
 
 .bianco{
