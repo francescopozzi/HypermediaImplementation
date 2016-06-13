@@ -10,12 +10,14 @@
 	<title>Pagina Assistenza</title>
 
 		<link href="./css/assistenza.css" rel="stylesheet">
-
+        <link rel="stylesheet" type="text/css" href="./css/stile.css">
+        <script src="./js/jquery.js" type="text/javascript"></script>
+        <script src="script.js" type="text/javascript"></script>
 </head>
 
 <body>
 
-	<!-- mettere header -->
+	<header id="getHeader"></header>
 
 	<div class="Intestazione">
 		<!-- il titolo e il bottone devono essere caricati DINAMICAMENTE -->
@@ -40,7 +42,19 @@
 
 	<h1 class="titolo">Potresti essere interessato a questa assistenza se possiedi:</h1>
 
-	<!-- mettere footer -->
-	<!-- mettere script per header e footer -->
+	<footer id="getFooter"> </footer>
+    
+        
+        
+        
+     <script>
+        $(function(){
+            $("#getHeader").load("./HeaderFooter/header.html");
+            });
+        $(function(){
+            $("#getFooter").load("./HeaderFooter/footer.html");
+            });
+        
+    </script>
 </body>
 </html>

@@ -1,22 +1,30 @@
 <html>
     <head>
         <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> Testimoni</title>
          <link rel="stylesheet" type="text/css" href="./css/stileChiSiamo.css">
-            </head>
+    
+        <link rel="stylesheet" type="text/css" href="./css/stile.css">
+        <script src="./js/jquery.js" type="text/javascript"></script>
+
+       
+        <script src="script.js" type="text/javascript"></script>       
+    
+    </head>
         <body>
-            
+            <header id="getHeader"></header>
          <div class="intestazione">
             <div class="titolo">
                 <h1 class="titolo">Chi Siamo</h1>
             </div>
             <div class="collegamenti">
                 <h4>
-                    <a href="chiSiamoInnovazioni.html">Innovazioni</a> 
+                    <a href="chiSiamoInnovazioni.html" class="separatore">Innovazioni</a> 
                     <span class="separatore">---------</span>
                     Testimonial
                     <span class="separatore">---------</span>
-                    <a href="chiSProgetti.html">Progetti</a>
+                    <a href="chiSProgetti.html" class="separatore">Progetti</a>
                 </h4>
             </div>
             <div class="clear"></div>
@@ -26,7 +34,7 @@
             <h1 class="sottotitolo">Testimonial</h1>
             <br>
             
-         <div class="primoBloccoInnovETest">
+         <div class="primoBloccoInnovETest sfondoGrigioChiaro">
                 <p class="descrizioneInnov" >
                     Negli ultimi anni il nostro modo di comunicare è radicalmente cambiato. Forse non si può nemmeno più parlare di comunicazione, le nuove tecnologie infatti ci stanno portando verso un'era dove le connessioni tra gli individui sono più profonde e significative.
                     TIM, che da sempre è sinonimo di comunicazione, si trasforma radicalmente per diventare un'azienda la cui tecnologia consente alle persone di connettersi tra loro e comunicare.
@@ -36,7 +44,7 @@
             <br>
            
             
-            <div class="bloccoProgetti bloccoPiccolo">
+            <div class="bloccoProgetti bloccoPiccolo azzurro">
                 <div class="progetto">
                     <div class="scrittaTestimoni">SIR TIM BERNERS-LEE <br><br> <img src="./Immagini/Pif.jpeg" alt="testimone"></div>
                     <div class="descrizione">Laureato alla Oxford University, Sir Tim insegna al Massachusetts Institute of Technology come Professore di ingegneria e come professore aggiunto nel Dipartimento di Ingegneria Elettrica e Scienze Informatiche al CSAIL.
@@ -75,14 +83,27 @@
            <div class="intestazione">
                 <div class="collegamenti footer">
                     <h4>
-                        <a href="chiSiamoInnovazioni.html">Innovazioni</a> 
+                        <a href="chiSiamoInnovazioni.html" class="separatore">Innovazioni</a> 
                         <span class="separatore">---------</span>
                         Testimonial
                         <span class="separatore">---------</span>
-                        <a href="chiSProgetti.html">Progetti</a>
+                        <a href="chiSProgetti.html" class="separatore">Progetti</a>
                     </h4>
                 </div>
             </div>
+            
+    <footer id="getFooter"> </footer>
+    
+                
+     <script>
+        $(function(){
+            $("#getHeader").load("./HeaderFooter/header.html");
+            });
+        $(function(){
+            $("#getFooter").load("./HeaderFooter/footer.html");
+            });
+        
+    </script>
         </body>
 
 </html>
