@@ -1,4 +1,5 @@
 <?php
+
 // Prende le credenziali da un altro php
 require_once("dbCredentials.php");
 
