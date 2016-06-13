@@ -13,7 +13,7 @@ function getFromDB(){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "getDispositivi.php", //Relative or absolute path to file.php file
+        url: "http://progettohyp.altervista.org/php/getDispositivi.php", //Relative or absolute path to file.php file
         data: { prod_id: id },
         success: function(response) {
 
