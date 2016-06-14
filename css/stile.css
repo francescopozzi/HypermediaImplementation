@@ -1,21 +1,19 @@
-
-
-
 .flex-item{
     margin: auto;
     padding: 10px;
 }
 
 div#immagine{
-    width: 75%;
+    width: 100%;
     margin: auto;
-    
+    text-align: center;
 }
 
 
 img.principale {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 400px;
+    margin: auto;
 }
 
 .contenuto{
@@ -108,17 +106,21 @@ span{
 
 .promozione{
     width: 80%;
+    height: auto;
     margin:auto;
     margin-top: 20px;
     margin-bottom: 50px;
     align-content: center;
     
 }
+.divImgPromoz{
+    width: 100%;
+}
 
 .imgPromozione{
     display: -webkit- block;
-    width: 50%;
-    height: auto;
+    width: auto;
+    height: 400px;
     display: block;
 	margin: 0px auto;
 	text-align: center;
