@@ -37,10 +37,27 @@ table.tabella {
     width: 400px;
     margin-top: 0px;
     margin-bottom: 0px;
-    background-image: url("../Immagini/image.png");
+   
+   }
+.riquadroCasaFam{
+     background-image: url("../Immagini/image.png");
     background-repeat: no-repeat;
     background-size: cover;
-   
+}
+.riquadroSalBen{
+     background-image: url("../Immagini/correre2222.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.riquadroTV{
+     background-image: url("../Immagini/cinema-a-casa-famiglia-televisione-1440x564_c.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.riquadroServizi{
+     background-image: url("../Immagini/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .bordiTabella{
     border-style: solid;
@@ -49,15 +66,25 @@ table.tabella {
     border-spacing: 0px;
     border-collapse: collapse;
 }
+
+.testoriquadro {
+   float: right;
+}
+
+.testoriquadro.sinistra {
+   float: left;
+}
+
 .nomiCategoriePrimaColonna{
     color: white;
-    text-align: right;
+    text-align: center;
     padding-right: 30px;
     padding-bottom: 150px;
 }
+
 .nomiCategorieSecondaColonna{
   color: white;
-    text-align: left;
+    text-align: center;
     padding-bottom: 150px;
     padding-left: 20px;
 }
@@ -86,8 +113,16 @@ a{
     text-decoration: none;
     color: white;
 }
-.testoPulsante{
+.testoPulsante {
+    position: relative;
+    top: 5px;
     font-size: 20px;
+    background-color: dodgerblue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase
 }
 
 
