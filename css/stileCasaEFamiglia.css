@@ -15,12 +15,35 @@ h1, h4 {
 }
 
 .principale{
-    height: 350px;
-    width: 900px;
+    height: 400px;
+    width: 80%;
     margin: auto;
+    
+}
+
+.sfondoCasaFamiglia{
     background-image: url("../Immagini/image.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+}
+.sfondoBenSalute{
+     background-image: url("../Immagini/getty_rf_photo_of_man_jogging_in_woods.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.sfondoTVEnter{
+    background-image: url("../Immagini/cinema-a-casa-famiglia-televisione-1440x564_c.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.sfondoServiziPersona{
+    background-image: url("../Immagini/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* STILI CASA E FAMIGLIA*/
@@ -30,13 +53,13 @@ h1, h4 {
     text-align: right;
     padding-right: 130px;
     padding-top: 200px;
-    font-size: 35px;
+    font-size: 40px;
     margin: 0;
 }
 .scrittaPiccolaCasaFamiglia{
     color: white;
     text-align: left;
-    padding-left: 550px;
+    padding-left: 700px;
     margin: 0;
     font-size: 17px;
     padding-bottom: 40px;
@@ -78,17 +101,17 @@ a{
 }
 .scrittaSuImmagineSaluteBenessere{
     color: white;
-    padding-left: 150px;
+    padding-left: 200px;
     padding-top: 100px;
     margin: 0;
-    font-size: 35px;
+    font-size: 40px;
     text-align: left;
 }
 .scrittaPiccolaSaluteBenessere{
     color: white;
     font-size: 17px;
     text-align: center;
-    padding-right: 300px;
+    padding-right: 350px;
     
 }
 /*STILI SERVIZI ALLA PERSONA*/
@@ -102,7 +125,7 @@ a{
     padding-left: 100px;
     padding-top: 10px;
     margin: 0;
-    font-size: 35px;
+    font-size: 40px;
     text-align: left;
 }
 .scrittaPiccolaServiziPersona{
@@ -121,10 +144,10 @@ a{
 }
 .scrittaSuImmagineTV{
     color: white;
-    padding-left: 350px;
+    padding-left: 400px;
     padding-top: 50px;
     margin: 0;
-    font-size: 35px;
+    font-size: 40px;
     text-align: left;
 }
 .scrittaPiccolaTV{
