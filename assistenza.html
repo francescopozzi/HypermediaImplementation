@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Assistenza</title>
+
+		<link href="./css/assistenza.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- mettere header -->
+
+	<div class="Intestazione">
+		<h1 class="titolo">ASSISTENZA</h1>
+	</div>
+
+	<!-- inizio primo blocco (dinamico) -->
+	<div class="Highlights">
+		<div class="primoBlocco" id="blu">
+			<div class="Intestazione">
+				<h3 class="titolo">HIGHLIGHTS</h3>
+			</div>
+			<ul class="lista" id="highlights">
+				<!-- dentro "lista" in realtà il contenuto è dinamico: dovrebbe scegliere 4 highlights random
+				da quelli che estrapola dal database, noi in realtà prendiamo sempre i soliti 4-->
+				<!--tutto questo ul verrà spostato probabilmente in js perchè è tutto dinamico -->
+				<!-- basta estrapolare il path delle immagini e il nome, il resto lo si lascia scritto così com'è -->
+				<li class="elemento" id="primo">
+					<img src="./Immagini/OldPhone.png" class="img" id="1">
+					<h3 class="nomeAS">ciao</h3>
+				</li>
+				<li class="elemento" id="secondo">
+					<img src="./Immagini/OldPhone.png" class="img" id="2">
+					<h3 class="nomeAS">come leggere la fattura della linea fissa</h3>
+				</li>
+				<li class="elemento" id="terzo">
+					<img src="./Immagini/OldPhone.png" class="img" id="3">
+					<h3 class="nomeAS">bella</h3>
+				</li>
+				<li class="elemento" id="quarto">
+					<img src="./Immagini/OldPhone.png" class="img" id="4">
+					<h3 class="nomeAS">bellali</h3>
+				</li>
+			</ul>
+			<!-- questo div serve solo per non avere l'opacità anche in tutto il resto del blocco, ma solo per il background. 
+					è importante che nel css il background sia absolute e gli altri div siano relative -->
+			<div class="backgroundBlu"></div>
+		</div>
+	</div>
+	<!-- fine primo blocco-->
+
+
+	<!-- inizio secondo blocco (statico) -->
+	<div class="Categorie">
+		<div class="secondoBlocco">
+			<ul class="lista">
+				<li class="elemento" id="primo">
+					<div class="bloccoGrigio" id="grigio">
+					<!-- bisogna mettere il link sia all'immagine che alla scritta, perchè ogni blocco
+					ha anche il margine, quindi si può cliccare anche all'esterno se si mette il link a tutto il blocco --> 
+						<a href="gestioneLinea.html">
+						<img src="./Immagini/Gestione_linea.png" class="img" id="1">
+						</a>
+						<a href="gestioneLinea.html">
+						<h3 class="nomeAS">Gestione linea e servizi</h3>
+						</a>
+					</div>
+				</li>
+				<li class="elemento" id="secondo">
+					<div class="bloccoGrigio" id="grigio">
+						<a href="controlloCosti.html">
+						<img src="./Immagini/Controlla_costi.png" class="img" id="2">
+						</a>
+						<a href="controlloCosti.html">
+						<h3 class="nomeAS">Controllo costi e pagamenti</h3>
+						</a>
+					</div>
+				</li>
+				<li class="elemento" id="terzo">
+					<div class="bloccoGrigio" id="grigio">
+						<a href="supportoTecnico.html">
+						<img src="./Immagini/Supporto_tecnico.png" class="img" id="3">
+						</a>
+						<a href="supportoTecnico.html">
+						<h3 class="nomeAS">Supporto tecnico</h3>
+						</a>
+					</div>
+				</li>
+				<li class="elemento" id="quarto">
+					<div class="bloccoGrigio" id="grigio">
+						<a href="assSL.html">
+						<img src="./Immagini/Logo_SL.png" class="img" id="4">
+						</a>
+						<a href="assSL.html">
+						<h3 class="nomeAS">SmartLife</h3>
+						</a>
+					</div>
+				</li>
+			</ul>		
+		</div>
+	</div>
+	<!-- fine secondo blocco -->
+
+	<!-- mettere footer -->
+	<!-- mettere script per header e footer -->
+</body>
+</html>

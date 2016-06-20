@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Gestione linea e servizi</title>
+
+		<link href="./css/assistenza.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<!-- mettere header -->
+
+	<div class="Intestazione">
+		<h1 class="titolo">GESTIONE LINEA E SERVIZI</h1>
+	</div>
+	<div class="container">
+
+		<!-- lista per i blocchi -->
+		<ul class="lista">
+
+			<li class="blocchiGruppo">
+				<!-- il blocco laterale è statico, cambia solo il colore della pagina in cui sono -->
+				<div class="bloccoLaterale" id="grigio">
+
+				
+					<table class="tabella">
+						<tr>
+							<!-- nel css la dimensione dell'immagine è settata fissa, e non va bene probabilmente BISOGNA RISOLVERE -->
+							<td><img src="./Immagini/Gestione_linea.png" class="immagine" id="attivo"></td>
+							<td><h3 class="nomeAS" id="attivo">Gestione linea e servizi</h3></td>
+						</tr>
+						<tr>
+							<td>
+							<!-- essendo una tabella bisogna linkare ogni cella, non posso fare tutta la riga in un colpo 
+							devo linkare ogni immagine e ogni scritta-->
+							<a href="controlloCosti.html">
+							<img src="./Immagini/Controlla_costi.png" class="immagine" id="passivo">
+							</a>
+							</td>
+							<td>
+							<a href="controlloCosti.html">
+							<h3 class="nomeAS" id="passivo">Controllo costi e pagamenti</h3>
+							</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<a href="supportoTecnico.html">
+							<img src="./Immagini/Supporto_tecnico.png" class="immagine" id="passivo">
+							</a>
+							</td>
+							<td>
+							<a href="supportoTecnico.html">
+							<h3 class="nomeAS" id="passivo">Supporto tecnico</h3>
+							</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<a href="assSL.html">
+							<img src="./Immagini/Logo_SL.png" class="immagine" id="passivo">
+							</a>
+							</td>
+							<td>
+							<a href="assSL.html">
+							<h3 class="nomeAS" id="passivo">SmartLife</h3>
+							</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+
+
+			</li>
+
+			<li class="blocchiGruppo">
+				<!-- il contenuto del bloccoElenco sarà dinamico -->
+				<div class="bloccoElenco" id="grigio">
+					<table class="tabella">
+						<tr class="riga" id="1">
+							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
+						</tr>
+						<tr class="riga" id="2">
+							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
+						</tr>
+						<tr class="riga" id="3">
+							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
+						</tr>
+						<tr class="riga" id="4">
+							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
+						</tr>
+						<tr class="riga" id="5">
+							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
+						</tr>
+						<tr class="riga" id="6">
+							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
+						</tr>
+					</table>
+				</div>
+			</li>
+
+		</ul>
+	</div>
+	
+	<!-- mettere footer -->
+	<!-- mettere script per header e footer -->
+</body>
+</html>
