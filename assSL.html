@@ -9,125 +9,73 @@
 	
 	<title>Assistenza per SmartLife</title>
 
-		<link href="./css/assistenza.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./css/assistenza.css">
         <link rel="stylesheet" type="text/css" href="./css/stileGenerale.css">
+
+        <script type="text/javascript">
+        	var idGruppo = 3;
+        </script>
+
         <script src="./js/jquery.js" type="text/javascript"></script>
-        <script src="script.js" type="text/javascript"></script>
-        <title> Dispositivi </title>
+        <script src="./js/assistenzePerGruppo.js" type="text/javascript"></script>
 </head>
 
 <body>
-   
-    <header id="getHeader"></header>
-	
-    
-    <div class="Intestazione">
-		<h1 class="titolo">ASSISTENZA PER SMARTLIFE</h1>
-	</div>
-	<div class="container">
 
-		<!-- lista per i blocchi -->
-		<ul class="lista">
+	<header id="getHeader"></header>
 
-			<li class="blocchiGruppo">
-				<!-- il blocco laterale è statico, cambia solo il colore della pagina in cui sono -->
-				<div class="bloccoLaterale" id="grigio">
-					<table class="tabella">
-						<tr>
-							<!-- nel css la dimensione dell'immagine è settata fissa, e non va bene probabilmente BISOGNA RISOLVERE -->
-							
-							<td>
-							<!-- essendo una tabella bisogna linkare ogni cella, non posso fare tutta la riga in un colpo 
-							devo linkare ogni immagine e ogni scritta-->
-							<a href="gestioneLinea.html">
-							<img src="./Immagini/Gestione_linea.png" class="immagine" id="passivo">
-							</a>
-							</td>
-							<td>
-							<a href="gestioneLinea.html">
-							<h3 class="nomeAS" id="passivo">Gestione linea e servizi</h3>
-							</a>
-							</td>
-							
-						</tr>
-						<tr>
-
-							<td>
-							<a href="controlloCosti.html">
-							<img src="./Immagini/Controlla_costi.png" class="immagine" id="passivo">
-							</a>
-							</td>
-							<td>
-							<a href="controlloCosti.html">
-							<h3 class="nomeAS" id="passivo">Controllo costi e pagamenti</h3>
-							</a>
-							</td>
-
-						</tr>
-						<tr>
-
-							<td>
-							<a href="supportoTecnico.html">
-							<img src="./Immagini/Supporto_tecnico.png" class="immagine" id="passivo">
-							</a>
-							</td>
-							<td>
-							<a href="supportoTecnico.html">
-							<h3 class="nomeAS" id="passivo">Supporto tecnico</h3>
-							</a>
-							</td>
-
-						</tr>
-						<tr>
-							<td><img src="./Immagini/Logo_SL.png" class="immagine" id="attivo"></td>
-							<td><h3 class="nomeAS" id="attivo">SmartLife</h3></td>
-						</tr>
-					</table>
-				</div>
-			</li>
-
-			<li class="blocchiGruppo">
-				<!-- il contenuto del bloccoElenco sarà dinamico -->
-				<div class="bloccoElenco" id="grigio">
-					<table class="tabella">
-						<tr class="riga" id="1">
-							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
-						</tr>
-						<tr class="riga" id="2">
-							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
-						</tr>
-						<tr class="riga" id="3">
-							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
-						</tr>
-						<tr class="riga" id="4">
-							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
-						</tr>
-						<tr class="riga" id="5">
-							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
-						</tr>
-						<tr class="riga" id="6">
-							<td class="titolo">• Soglia di protezione e blocco del traffico dati</td><td class="titolo">• Soglia di protezione e blocco del traffico dati</td>
-						</tr>
-					</table>
-				</div>
-			</li>
-
-		</ul>
+	<div id="percentualeTitolo">
+		<h1 class="centro blu">ASSISTENZA PER SMARTLIFE</h1>
 	</div>
 	
-	<footer id="getFooter"> </footer>
-    
-        
-        
-        
-     <script>
+	<div class="blocchi spanBarre centro allWidth">
+
+		<!-- inizio blocco laterale di sinistra statico -->
+		<div class="bloccoLaterale sfondoGrigioChiaro">
+			<a href="./gestioneLinea.html">
+			<div class="spanBarre assistenzaCliccabile allWidth">
+				<img src="./Immagini/Gestione_linea.png" class="immagineLaterale">
+				<h1 class="nomeAS margineAuto">Gestione linea e servizi</h1>
+			</div>
+			</a>
+			<a href="./controlloCosti.html">
+			<div class="spanBarre assistenzaCliccabile allWidth">
+				<img src="./Immagini/Controlla_costi.png" class="immagineLaterale">
+				<h1 class="nomeAS margineAuto">Controllo costi e pagamenti</h1>
+			</div>
+			</a>
+			<a href="./supportoTecnico.html">
+			<div class="spanBarre assistenzaCliccabile allWidth">
+				<img src="./Immagini/Supporto_tecnico.png" class="immagineLaterale">
+				<h1 class="nomeAS margineAuto">Supporto tecnico</h1>
+			</div>
+			</a>
+			<div class="spanBarre assistenzaCliccabile allWidth">
+				<img src="./Immagini/Logo_SL.png" class="immagineLaterale">
+				<h1 class="nomeAS margineAuto rosso">SmartLife</h1>
+			</div>
+		</div>
+		<!-- fine blocco laterale di sinistra statico-->
+
+		<!-- inizio blocco con elenco delle assistenze dinamico -->
+		<div class="elencoAssistenze sfondoGrigioChiaro">
+			<table class="tabella" id="dinamico">
+				<!-- contenuto dinamico -->		
+			</table>
+		</div>
+		<!-- fine blocco con elenco delle assistenze dinamico -->
+
+	</div>
+
+    <footer id="getFooter"> </footer>
+            
+    <script>
         $(function(){
             $("#getHeader").load("./HeaderFooter/header.html");
             });
         $(function(){
             $("#getFooter").load("./HeaderFooter/footer.html");
-            });
-        
+            });    
     </script>
 </body>
 </html>

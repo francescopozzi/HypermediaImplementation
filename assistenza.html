@@ -9,114 +9,73 @@
 	
 	<title>Assistenza</title>
 
-		<link href="./css/assistenza.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./css/assistenza.css">
         <link rel="stylesheet" type="text/css" href="./css/stileGenerale.css">
         <script src="./js/jquery.js" type="text/javascript"></script>
-            <script src="script.js" type="text/javascript"></script>
+        <script src="./js/getHighlightsPerAssistenza.js" type="text/javascript"></script>
 
 </head>
 
 <body>
 
     <header id="getHeader"></header>
-	
 
-	<div class="Intestazione">
-		<h1 class="titolo">ASSISTENZA</h1>
+    <div class="percentualeTitolo">
+    	<h1 class="blu centro">ASSISTENZA</h1>
+    </div>
+
+	<!-- inizio blocco dinamico degli highlights -->
+	<div class="highlights azzurro">		
+		<div id="titolo">
+			<h1 class="centro blu">HIGHLIGHTS</h1>
+		</div>
+		<div class="spanBarre allWidth" id="dinamico">
+			<!-- contenuto dinamico -->
+		</div>
 	</div>
+	<!-- fine blocco dinamico -->
 
-	<!-- inizio primo blocco (dinamico) -->
-	<div class="Highlights">
-		<div class="primoBlocco" id="blu">
-			<div class="Intestazione">
-				<h3 class="titolo">HIGHLIGHTS</h3>
+	<!-- inizio blocco statico -->
+	<div class="assistenze">
+		<div class="spanBarre allWidth">
+			<div class="quartoWidth centro">
+				<a href="./gestioneLinea.html">
+				<div class="miniBlocco sfondoGrigioChiaro">
+					<img src="./Immagini/Gestione_linea.png" class="immagine">
+					<h2 class="nomeAS">Gestione linea e servizi</h2>	
+				</div>
+				</a>
 			</div>
-			<ul class="lista" id="highlights">
-				<!-- dentro "lista" in realtà il contenuto è dinamico: dovrebbe scegliere 4 highlights random
-				da quelli che estrapola dal database, noi in realtà prendiamo sempre i soliti 4-->
-				<!--tutto questo ul verrà spostato probabilmente in js perchè è tutto dinamico -->
-				<!-- basta estrapolare il path delle immagini e il nome, il resto lo si lascia scritto così com'è -->
-				<li class="elemento" id="primo">
-					<img src="./Immagini/OldPhone.png" class="img" id="1">
-					<h3 class="nomeAS">ciao</h3>
-				</li>
-				<li class="elemento" id="secondo">
-					<img src="./Immagini/OldPhone.png" class="img" id="2">
-					<h3 class="nomeAS">come leggere la fattura della linea fissa</h3>
-				</li>
-				<li class="elemento" id="terzo">
-					<img src="./Immagini/OldPhone.png" class="img" id="3">
-					<h3 class="nomeAS">bella</h3>
-				</li>
-				<li class="elemento" id="quarto">
-					<img src="./Immagini/OldPhone.png" class="img" id="4">
-					<h3 class="nomeAS">bellali</h3>
-				</li>
-			</ul>
-			<!-- questo div serve solo per non avere l'opacità anche in tutto il resto del blocco, ma solo per il background. 
-					è importante che nel css il background sia absolute e gli altri div siano relative -->
-			<div class="backgroundBlu"></div>
+			<div class="quartoWidth centro">
+				<a href="./controlloCosti.html">
+				<div class="miniBlocco sfondoGrigioChiaro">
+					<img src="./Immagini/Controlla_costi.png" class="immagine">
+					<h2 class="nomeAS">Controllo costi e pagamenti</h2>
+				</div>
+				</a>
+			</div>
+			<div class="quartoWidth centro">
+				<a href="./supportoTecnico.html">
+				<div class="miniBlocco sfondoGrigioChiaro" >
+					<img src="./Immagini/Supporto_tecnico.png" class="immagine">
+					<h2 class="nomeAS">Supporto tecnico</h2>
+				</div>
+				</a>
+			</div>
+			<div class="quartoWidth centro">
+				<a href="./assSL.html">
+				<div class="miniBlocco sfondoGrigioChiaro">
+					<img src="./Immagini/Logo_SL.png" class="immagine">
+					<h2 class="nomeAS">SmartLife</h2>
+				</div>	
+				</a>	
+			</div>
 		</div>
 	</div>
-	<!-- fine primo blocco-->
-
-
-	<!-- inizio secondo blocco (statico) -->
-	<div class="Categorie">
-		<div class="secondoBlocco">
-			<ul class="lista">
-				<li class="elemento" id="primo">
-					<div class="bloccoGrigio" id="grigio">
-					<!-- bisogna mettere il link sia all'immagine che alla scritta, perchè ogni blocco
-					ha anche il margine, quindi si può cliccare anche all'esterno se si mette il link a tutto il blocco --> 
-						<a href="gestioneLinea.html">
-						<img src="./Immagini/Gestione_linea.png" class="img" id="1">
-						</a>
-						<a href="gestioneLinea.html">
-						<h3 class="nomeAS">Gestione linea e servizi</h3>
-						</a>
-					</div>
-				</li>
-				<li class="elemento" id="secondo">
-					<div class="bloccoGrigio" id="grigio">
-						<a href="controlloCosti.html">
-						<img src="./Immagini/Controlla_costi.png" class="img" id="2">
-						</a>
-						<a href="controlloCosti.html">
-						<h3 class="nomeAS">Controllo costi e pagamenti</h3>
-						</a>
-					</div>
-				</li>
-				<li class="elemento" id="terzo">
-					<div class="bloccoGrigio" id="grigio">
-						<a href="supportoTecnico.html">
-						<img src="./Immagini/Supporto_tecnico.png" class="img" id="3">
-						</a>
-						<a href="supportoTecnico.html">
-						<h3 class="nomeAS">Supporto tecnico</h3>
-						</a>
-					</div>
-				</li>
-				<li class="elemento" id="quarto">
-					<div class="bloccoGrigio" id="grigio">
-						<a href="assSL.html">
-						<img src="./Immagini/Logo_SL.png" class="img" id="4">
-						</a>
-						<a href="assSL.html">
-						<h3 class="nomeAS">SmartLife</h3>
-						</a>
-					</div>
-				</li>
-			</ul>		
-		</div>
-	</div>
-	<!-- fine secondo blocco -->
+	<!-- fine blocco statico -->
 
 	<footer id="getFooter"> </footer>
-    
-        
-        
-        
+            
      <script>
         $(function(){
             $("#getHeader").load("./HeaderFooter/header.html");
@@ -124,7 +83,7 @@
         $(function(){
             $("#getFooter").load("./HeaderFooter/footer.html");
             });
-        
     </script>
+
     </body>
 </html>

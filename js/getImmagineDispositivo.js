@@ -1,7 +1,7 @@
 $(document).ready(ready);
 function ready(){
 
-    // è una funzione che chiama una funzione (molto inutile tutto ciò)
+    // è una funzione che chiama una funzione, qua non serve a niente
     getFromDB();
 
 }
