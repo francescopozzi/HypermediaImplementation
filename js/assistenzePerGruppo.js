@@ -22,8 +22,10 @@ function getFromDB(){
 
             for (var i = 0; i < assistenze.length; i=i+2) {
                 elementoRiga += "<tr class='riga'>"
-                        +"<td class='nomeAS blu titolo'>• "+ assistenze[i].Nome + "</td>"
-                        +"<td class='nomeAS blu titolo'>• "+ assistenze[i+1].Nome + "</td>"
+                        +"<td class='nomeAS titolo'><a href='./paginaAssistenza.html?id="+ assistenze[i].ID +"' class='blu'>• "
+                        + assistenze[i].Nome + "</a></td>"
+                        +"<td class='nomeAS titolo'><a href='./paginaAssistenza.html?id="+ assistenze[i+1].ID +"' class='blu'>• "
+                        + assistenze[i+1].Nome + "</a></td>"
                         +"</tr>";
             }
             

@@ -110,12 +110,15 @@
 }
 
 .bottone{
-	border: solid blue 1px;
-	height: 35px;
+	border: solid blue 2px;
+	height: 30px;
+	line-height: 35px;
 	position: absolute;
 	right: 0px;
 	font-size: 15px;
 	bottom: 10px;
+	padding: 2%;
+	text-align: center;
 }
 
 .informazioni{
@@ -130,4 +133,13 @@
 	height: auto;
 	margin: auto;
 	padding-top: 10px;
+}
+
+.gruppo{
+	font-size: 25px;
+}
+
+p{
+	padding-left: 10px;
+	font-size: 20px;
 }

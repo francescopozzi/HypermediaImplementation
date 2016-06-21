@@ -12,6 +12,7 @@ if (mysqli_connect_errno()) {
     exit();
 }
 else {
+    mysqli_set_charset($mysqli,"utf8");
     // connessione ok
     // seleziono tutti le assistenze highlights
     $query = " SELECT * FROM `Assistenza` WHERE `Highlight` = 1";

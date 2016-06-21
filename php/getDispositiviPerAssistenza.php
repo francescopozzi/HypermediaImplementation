@@ -2,7 +2,7 @@
 
 header('Access-Control-Allow-Origin: *');
 
-$idGroup=$_POST["gruppo"];
+$id=$_POST["assistenza"];
 
 // Prende le credenziali da un altro php
 require_once("dbCredentials.php");
@@ -18,7 +18,7 @@ else {
     mysqli_set_charset($mysqli,"utf8");
     // connessione ok
     // seleziono tutti le assistenze highlights
-    $query = " SELECT * FROM `Assistenza` WHERE Gruppo = $idGroup";
+    $query = " SELECT ID, Immagine, nome FROM `DispositiviAssistenza` JOIN `Dispositivi` ON IDdisp = ID WHERE IDass = $id ";
     // esecuzione della query
     $result = $mysqli->query($query);
     // se ci sono risultati: li mette in array

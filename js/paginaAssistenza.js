@@ -5,6 +5,8 @@ function ready(){
 
     getFromDB(idAssistenza);
 
+    getDispositivi(idAssistenza);
+
 }
 
 function getFromDB(identificativo){
@@ -18,17 +20,22 @@ function getFromDB(identificativo){
 
             console.log(JSON.parse(response));
 
-            var assistenze = JSON.parse(response);
+            var assistenza = JSON.parse(response);
             
-            var elementoRiga = "";
+            var faq = "";
+            var descrizione = "";
+            var intestazione = "";
 
-            for (var i = 0; i < assistenze.length; i=i+2) {
-                elementoRiga += "<h1> ciao </h1>"
-            }
-            
-              
-            $("#dinamico").html(elementoRiga);
-           
+            faq += "" + assistenza[0].FAQ + "";
+            descrizione += "" + assistenza[0].Descrizione + "";
+            intestazione += "<h1 class='blu'>" + assistenza[0].Nome + "</h1>"
+                          + "<a href='./"+ getLinkGruppo(assistenza[0].Gruppo) +"' class='bottone blu sfondoGrigioChiaro gruppo'>"
+                          +  getNomeGruppo(assistenza[0].Gruppo) + "</a>";
+
+
+            $("#descrizione").html(descrizione);
+            $("#faq").html(faq);
+            $("#intestazione").html(intestazione);
         },
         error: function(request,error) 
         {
@@ -38,7 +45,40 @@ function getFromDB(identificativo){
 
 }
 
-// funzione trovata online per ottenere le variabili di una query string
+function getDispositivi(identificativo){
+  $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        data: {assistenza:identificativo}, 
+        url: "http://progettohyp.altervista.org/php/getDispositiviPerAssistenza.php", //Relative or absolute path to file.php file
+        success: function(response) {
+
+            console.log(JSON.parse(response));
+
+            var dispositivi = JSON.parse(response);
+            
+            var slidebar = "";
+        
+            for(var i=0; i<dispositivi.length; i++){
+              slidebar += "<li class='centro'>"
+                        + "<img src='"+ dispositivi[i].Immagine + "'>"
+                        + "<h1 class='blu'>" + dispositivi[i].nome + "</h1>"
+                        + "</li>";
+            }
+            
+            
+            $("#light-slider").html(slidebar);
+            
+        },
+        error: function(request,error) 
+        {
+            console.log("Error");
+        }
+    });       
+}
+
+// funzione trovata online per ottenere i valori delle variabili di una query string
 function getQueryVariable(variable)
 {
        var query = window.location.search.substring(1);
@@ -48,4 +88,41 @@ function getQueryVariable(variable)
                if(pair[0] == variable){return pair[1];}
        }
        return(false);
+}
+
+// pessima funzione per nome gruppo
+function getNomeGruppo(id)
+{
+  var nome = "";
+  if(id == 0){
+    nome += "Gestione linea e servizi";
+  }
+  else if(id == 1){
+    nome += "Controllo costi e pagamenti";
+  }
+  else if (id == 2){
+    nome += "Supporto tecnico";
+  }
+  else if (id == 3) {
+    nome += "Assistenza per SmartLife";
+  }
+  return(nome);
+}
+
+function getLinkGruppo(id)
+{
+  var nome = "";
+  if(id == 0){
+    nome += "gestioneLinea.html";
+  }
+  else if(id == 1){
+    nome += "controlloCosti.html";
+  }
+  else if (id == 2){
+    nome += "supportoTecnico.html";
+  }
+  else if (id == 3) {
+    nome += "assSL.html";
+  }
+  return(nome);
 }
