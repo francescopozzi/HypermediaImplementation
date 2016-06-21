@@ -22,6 +22,10 @@ h1, h4 {
     display: -webkit-inline-flex;
     display: inline-flex;
 }
+.ridimensionaImmagine{
+    width: 300px;
+    height: 300px; 
+}
 
 .logo{
     padding-left: 150px;

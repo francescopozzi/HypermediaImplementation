@@ -28,7 +28,7 @@ function getFromDB(identificativo){
             
            immagine = "" + "<img src='"+smart[0].Copertina+"' > "+ "" ;
             
-            logo = "" + "<img src='"+smart[0].Immagine+"' > "+ "" ;
+            logo = "" + "<img src='"+smart[0].Immagine+"'class='ridimensionaImmagine' > "+ "" ;
             
             titolo += "" + smart[0].Titolo + "";
             faq += "" + smart[0].FAQ + "";
