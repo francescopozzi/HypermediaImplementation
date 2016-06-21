@@ -23,7 +23,7 @@ img.principale {
     height: 250px;
     min-width: 300px;
     min-height: 250px;
-    margin: auto;
+    margin:10px;
 
 }
 
@@ -50,10 +50,9 @@ img.principale {
 .striscia{
     display: -webkit-inline-flex;
     display: inline-flex; 
-    width: 50%;
-    margin: 10px;
-    position: relative;
-    left: 25%;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
     min-width: 650px;
     
 }
@@ -64,9 +63,7 @@ img.principale {
     height: 200px;
     min-width: 100px;
     min-height: 200px;
-    position: relative;
-    top: 10%;
-    left: 0px;
+    margin-top: 20px;
     margin-left: 10px;
 }
 
@@ -147,10 +144,10 @@ span{
    
 }
 
-.imgCatDispositiviLato{
+/*.imgCatDispositiviLato{
     height: 100px;
     width: 100px;    
-}
+}*/
 
 .filtro{
     display: -webkit-inline-flex;
@@ -190,7 +187,7 @@ span{
 
 .dispositivi{
     width: 250px;
-    height: 250px;
+    height: 280px;
     margin: auto;
 }
 
@@ -203,12 +200,16 @@ span{
 	text-align: center;
 }
 
+.nomeDispositivo{
+    height: 50px;
+}
+
 .imgDispositiviGrande{
     display: -webkit- block;
     width: auto;
     height: 400px;
     display: block;
-	margin: 0px auto;
+	margin: auto;
 	text-align: center;
 }
 
@@ -229,9 +230,68 @@ span{
     margin-top: 100px;
 }
 
+.caratteristicheDispositivo{
+    padding: 15px;
+    text-align: justify;
+}
+
+.menuDispositivo{
+    margin-top: 30px;
+    margin-right: 1px;
+    border-style: solid;
+    border-width: medium;
+    border-color: cornflowerblue;
+    font-size: 50px;
+    
+}
+
+.primoBlocco{
+    margin-left: 50px;
+}
+
+
+td{
+    padding-right: 100px;
+}
+
+.elencoCaratteristiche{
+    font-weight: bold;
+}
+
+#testoRegistrazione{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.titolitesto{
+    font-size:20px; 
+    text-align: left;
+}
+
 .centrato{
     display: -webkit-inline-flex;
     display: inline-flex;
     width: 100%;
     
 }
+
+.prezziPromozioni{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    margin: auto;
+    width: 100%;
+    
+    
+}
+
+.barrato{
+     text-decoration: line-through;
+}
+
+.prezzo{
+    margin: auto;
+   
+}
+
