@@ -1,15 +1,16 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
       
         <link rel="stylesheet" type="text/css" href="./css/stileGenerale.css">
         <link rel="stylesheet" type="text/css" href="./css/stilePaginaApplicazione.css">
-        
+        <link rel="stylesheet" type="text/css" href="./css/lightslider.css">
      
         <script src="./js/jquery.js" type="text/javascript"></script>
         <script src="./js/paginaApplicazione.js" type="text/javascript"></script>
+        <script src="./js/lightslider.js" type="text/javascript"></script>
         
         <title> Applicazione </title>
     
@@ -28,7 +29,8 @@
             <!-- <h2> gndgnkdkgnknsgdklfklnvkdvklfdlfdvln</h2> -->
         </div>
             
-            <div class="pulsante"></div>
+            <div class="pulsante sfondoGrigioChiaro" id ="bottone">
+            </div>
             
         </div>
         
@@ -51,7 +53,7 @@
         
         <div class="faq">
             <div class="scrittaFaq">faq:
-                    </div>
+             </div>
                     <div class="descrizione" id = "faq">
                        <!-- <img src="Immagini/Cattura.PNG">
                         <span> Chi può attivare l'offerta Sfoglio digitale? <br> 
@@ -63,12 +65,15 @@
                         <span>Chi può attivare l'offerta Sfoglio digitale? <br> 
                         L'offerta è attivabile dai CLienti ricaricabili TIM, con addebito del costo mensile su Carta di Credito <br></span> -->
                     </div>
-                </div>
+         </div>
             
-        </div>
+       
         
         <h2 class="sottotitolo"> dispositivi compatibili con questa applicazione</h2>
         
+        <ul class="azzurro" id="light-slider">
+
+        </ul>
         
     <footer id="getFooter"> </footer>
     
@@ -81,8 +86,7 @@
             });
         $(function(){
             $("#getFooter").load("./HeaderFooter/footer.html");
-            });
-        
+            });        
     </script>      
     </body>
     

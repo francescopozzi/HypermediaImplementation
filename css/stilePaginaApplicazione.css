@@ -36,10 +36,29 @@ h1, h4 {
 .titolo{
     text-align: center;
     padding-top: 100px;
-    padding-left: 150px;
+    padding-left: 100px;
     text-transform: uppercase; 
     font-size: 20px;
     font-weight: bold;
+}
+
+.pulsante{
+	border: solid blue 2px;
+  	height: 40px;
+    width: auto;
+    min-width: 220px;
+	line-height: 35px;
+	/*position: absolute;*/
+	right: 0px;
+	font-size: 15px;
+	bottom: 10px;
+	padding: 5px;
+    margin-top: 20px;
+	text-align: center;
+}
+
+.categoria{
+	font-size: 25px;
 }
 
 .bloccoGrande {
