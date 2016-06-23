@@ -28,7 +28,8 @@ function getFromDB(){
                 num=i*3;
                 for(var j=0; j<3; j++){
                     if(num+j+1<=dispositivi.length){
-                        elementoDispositivo+="<a href='./paginaDispositivo.html'>"
+                        elementoDispositivo+="<a href='./paginaDispositivo.html?"
+                        +"id="+dispositivi[j+num].ID+"'>"
                         +"<div class='dispositivi sfondoGrigioChiaro'>"
                         +"<h2 class='scrittaAzzurra centro nomeDispositivo'>" +dispositivi[j+num].Nome + "</h2>"
                         +"<img src='"+dispositivi[j+num].Immagine+"' alt='telefono' class='imgDispositivi'>"

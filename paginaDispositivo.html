@@ -9,6 +9,7 @@
         <script src="./js/jquery.js" type="text/javascript"></script>
 
         <script src="./js/paginaDispositivo.js" type="text/javascript"></script>
+        <script src="./js/navMenu.js" type="text/javascript"></script>
         <title> Pagina Dispositivo </title>
     
     </head>
@@ -24,15 +25,14 @@
         
     <div class="centrato" >
         
-        <div class="sfondoGrigioChiaro bloccoDispositivo">
-        
-        <img src="./Immagini/huawei%20p9.png" alt="telefono"   class="imgDispositiviGrande" >   
+        <div class="sfondoGrigioChiaro bloccoDispositivo" id="img">
+         
         
         </div>
         
          
         <div class="sfondoGrigioChiaro bloccoDispositivo">
-        <h1 class="centro scrittaAzzurra" id="nomeDispositivo"> </h1>
+        <h1 class="centro scrittaAzzurra" id="nome"> </h1>
             
         <p class="caratteristicheDispositivo" id="descrizione">
             
@@ -45,24 +45,33 @@
         
     <span>
     
-    <div class="menuDispositivo primoBlocco sfondoGrigioChiaro">
-        Specifiche Tecniche</div>
-    <div class="menuDispositivo sfondoGrigioChiaro">
-        Smartlife</div>
-    <div class="menuDispositivo sfondoGrigioChiaro">
-        Assistenza</div>
+    <div class="menuDispositivo primoBlocco azzurro" id="SP">
+       <a href="#" class="nero" id="1"> Specifiche Tecniche </a> </div>
     
-    </span>    
-    <div class="sfondoGrigioChiaro descrizioneDispositivo">
+    <div class="menuDispositivo sfondoGrigioChiaro" id="SL">
+        <a href="#" class="nero" id="2"> Smartlife </a></div>
     
-
-    </p>
+    <div class="menuDispositivo sfondoGrigioChiaro" id="AS">
+        <a href="#" class="nero" id="3"> Assistenza</a></div>
+    
+    </span>
+        
+    <div class="menu">
+       
+    <div class="sfondoGrigioChiaro descrizioneDispositivo" id="specifiche">
 
     </div>
      
-    
+    <div class="sfondoGrigioChiaro linkASmartlife" id="toSmarlife">
+    <h1> CIAO </h1>
+    </div>
         
-    
+    <div class="sfondoGrigioChiaro linkAdAssistenza" id="toAssistenza">
+    <h1> CIAOoooooo </h1>
+    </div>  
+    </div>
+        
+   
 
     <footer id="getFooter"> </footer>
        

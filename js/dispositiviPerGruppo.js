@@ -1,9 +1,51 @@
 $(document).ready(ready);
 function ready(){
-
+    
     getFromDB();
 
+   
 }
+
+var dispositivi                 = null;
+var numeroDispositiviPerRiga    = 3;
+var numeroDispositiviPerPagina  = 9;
+
+function popolaHtmlConDispositivi( pagina ) { 
+    
+    var conteggioDispositivi    = 0;
+    var elementoDispositivo     = "";
+    
+    var inizio = pagina * numeroDispositiviPerPagina;
+    
+    for (var i = inizio; i < (inizio + numeroDispositiviPerPagina) && i < dispositivi.length; i++) {
+        
+        if ( conteggioDispositivi == 0 ) {
+             elementoDispositivo += "<span class='rigaDispositivo'>";
+        }
+        conteggioDispositivi++;
+        
+        elementoDispositivo += "<a href='./paginaDispositivo.html?"
+                            + "id="+dispositivi[i].ID+"'>"
+                            + "<div class='dispositivi sfondoGrigioChiaro'>"
+                            + "<h2 class='scrittaAzzurra centro nomeDispositivo'>" +dispositivi[i].Nome + "</h2>"
+                            + "<img src='"+dispositivi[i].Immagine+"' alt='telefono' class='imgDispositivi'>"
+                            + " <h1 class='rosso centro'>" + dispositivi[i].Prezzo +   "</h1>"
+                            + "</a>"
+                            + "</div>";
+        
+        if ( conteggioDispositivi == numeroDispositiviPerRiga ) {
+            conteggioDispositivi = 0;
+            elementoDispositivo += "</span>";
+        }
+        
+    }
+    
+    $("#dinamico").html( elementoDispositivo );
+    
+    $(".cambiaPagina a").removeClass("rosso");
+    $("#pag" + pagina + " a").addClass("rosso");
+    
+} 
 
 function getFromDB(){
     $.ajax({
@@ -16,47 +58,24 @@ function getFromDB(){
 
             console.log(JSON.parse(response));
 
-            var dispositivi = JSON.parse(response);
-            var num=0;
-            var numRighe=0;
+            dispositivi = JSON.parse(response);
+            
+            var numPagine = Math.ceil( dispositivi.length / numeroDispositiviPerPagina );
+            
+            
             var elementoDispositivo = "";
-            var numPagine=1;
-            
-            numRighe=dispositivi.length/3;
-            if(dispositivi.length%9==0)
-                numPagine=dispositivi.length/9;
-            else 
-                numPagine=dispositivi.length/9+1;
-            
-            
-            for (var i=0; i<numRighe && i<3; i++) {
-                elementoDispositivo+= "<span class='rigaDispositivo'>";
-                num=i*3;
-                for(var j=0; j<3; j++){
-                    if(num+j+1<=dispositivi.length){
-                        elementoDispositivo+="<a href='./paginaDispositivo.html'>"
-                        +"<div class='dispositivi sfondoGrigioChiaro'>"
-                        +"<h2 class='scrittaAzzurra centro nomeDispositivo'>" +dispositivi[j+num].Nome + "</h2>"
-                        +"<img src='"+dispositivi[j+num].Immagine+"' alt='telefono' class='imgDispositivi'>"
-                        +" <h1 class='rosso centro'>" +dispositivi[j+num].Prezzo +   "</h1>"
-                        +"</a>"
-                        +"</div>";
-                
-                    }
-                    else{
-                        elementoDispositivo+="<div class='dispositivi'></div>"
-                    }
-                }
-                    
-                     
-               elementoDispositivo+="</span>";
-                
+            for ( var i = 0; i < numPagine; i++ ) {
+                 elementoDispositivo += "<li class='cambiaPagina' id='pag" + i + "' >"
+                                    + "<a href='#' onclick='javascript:popolaHtmlConDispositivi(" + i + "); return false;' class='sfondoGrigioChiaro' >" + (i + 1) + "</a>"
+                                    + "</li>";
             }
+           
+            $(".spanCambioPagina").html( elementoDispositivo );
             
-              
-            $("#dinamico").html(elementoDispositivo);
+            popolaHtmlConDispositivi( 0 );
            
         },
+        
         error: function(request,error) 
         {
             console.log("Error");
