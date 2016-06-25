@@ -299,21 +299,27 @@ td{
 .descrizioneDispositivo{
     margin-left: 50px;
     margin-top: 0;
-    z-index: 0;
+    z-index: 2;
     position: absolute;
 }
 
 .linkASmartlife{
-    margin-left: 50px;
     margin-top: 0;
-    z-index: 1;
+    z-index: 0;
+}
+
+.lSSlideWrapper{
+    margin-left: 50px !important;
+    
 }
 
 .linkAdAssistenza{
     margin-left: 50px;
     margin-top: 0;
-    z-index: 2;
+    z-index: 1;
     position: absolute;
+    display: inline-flex;
+    display: -webkit- inline;
 }
 
 
@@ -362,4 +368,18 @@ td{
 .dimImgSL{
     height: 200px;
     width: 250px;
+    
+}
+
+.elementiSlideBar{
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.assistenze{
+    font-size: 30px;
+}
+
+#toAssistenza1{
+    margin-right: 50px;
 }

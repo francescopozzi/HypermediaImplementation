@@ -7,6 +7,8 @@ function ready(){
     
     getSmartLife(idDispositivo);
     
+    getAssistenze(idDispositivo);
+    
 
 }
 
@@ -93,10 +95,13 @@ function getSmartLife(identificativo){
             var slidebar = "";
             immagini = smartLife.length;
             for(var i=0; i<smartLife.length; i++){
-              slidebar += "<li class='centro'>"
+              slidebar += "<a href='./paginaApplicazione.html?"
+                        + "id="+smartLife[i].ID+"'>"
+                        +"<li class='centro elementiSlideBar'>"
                         + "<img src='"+ smartLife[i].Immagine + "' onload=\"aggiorna();\"class='dimImgSL'>"
                         + "<h1 class='blu'>" + smartLife[i].Nome + "</h1>"
-                        + "</li>";
+                        + "</li>"
+                        + "</a>";
             }
             
             
@@ -111,6 +116,51 @@ function getSmartLife(identificativo){
     });       
 }
 
+function getAssistenze(identificativo){
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        data: {dispositivi:identificativo}, 
+        url: "http://progettohyp.altervista.org/php/getAssistenzePerDispositivi.php", //Relative or absolute path to file.php file
+        success: function(response) {
+
+            console.log(JSON.parse(response));
+            
+            var assistenze = JSON.parse(response);
+            
+            var ass1= "";
+            var ass2= "";
+            
+            for(var i=0; i<assistenze.length/2; i++){
+                ass1 += "<a href='./paginaAssistenza.html?"
+                            + "id="+assistenze[i].ID+"'>"
+                            + "<li class='assistenze nero'>" + assistenze[i].Nome+"</li>"
+                            +"</a>";
+                
+            }
+            
+            for(var i=assistenze.length/2; i<assistenze.length; i++){
+                ass2 += "<a href='./paginaAssistenza.html?"
+                            + "id="+assistenze[i].ID+"'>"
+                            + "<li class='assistenze nero'>" + assistenze[i].Nome+"</li>"
+                            +"</a>";
+            }
+            
+            
+            
+            
+            $("#toAssistenza1").html(ass1);
+            $("#toAssistenza2").html(ass2);
+            
+            
+        },
+        error: function(request,error) 
+        {
+            console.log("Error");
+        }
+    });       
+}
 
 
 // funzione trovata online per ottenere le variabili di una query string

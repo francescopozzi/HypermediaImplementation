@@ -1,11 +1,13 @@
 $(document).ready(ready);
 function ready(){
-    $("#1").on("click", attivaSpecifiche);
-    $("#2").on("click", attivaSmartlife);
+    $("#1").on("click", attivaSmartlife);
+    $("#2").on("click", attivaSpecifiche);
     $("#3").on("click", attivaAssistenza);
     $("#light-slider").show();
     $("#specifiche").hide();
-    $("#toAssistenza").hide();
+    $("#toAssistenza1").hide();
+    $("#toAssistenza2").hide();
+    
     
     
 }
@@ -19,7 +21,8 @@ function attivaSpecifiche(){
     $("#SP").addClass("azzurro");
     $("#specifiche").show();
     $("#light-slider").hide();
-    $("#toAssistenza").hide();
+    $("#toAssistenza1").hide();
+    $("#toAssistenza2").hide();
     $("li").hide();
 }
 
@@ -33,7 +36,8 @@ function attivaSmartlife(){
     $("li").show();
     $("#light-slider").show();
     $("#specifiche").hide();
-    $("#toAssistenza").hide();
+    $("#toAssistenza1").hide();
+    $("#toAssistenza2").hide();
 }
 
 function attivaAssistenza(){
@@ -43,9 +47,11 @@ function attivaAssistenza(){
     $("#SL").addClass("sfondoGrigioChiaro");
     $("#AS").removeClass("sfondoGrigioChiaro");
     $("#AS").addClass("azzurro");
-    $("#toAssistenza").show();
     $("#light-slider").hide();
     $("#specifiche").hide();
     $("li").hide();
+    $(".assistenze").show();
+    $("#toAssistenza1").show();
+    $("#toAssistenza2").show();
 }
 

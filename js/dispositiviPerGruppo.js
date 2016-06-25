@@ -10,7 +10,7 @@ var dispositivi                 = null;
 var numeroDispositiviPerRiga    = 3;
 var numeroDispositiviPerPagina  = 9;
 
-function popolaHtmlConDispositivi( pagina ) { 
+function popolaHtmlConDispositivi( pagina,gruppo ) { 
     
     var conteggioDispositivi    = 0;
     var elementoDispositivo     = "";
@@ -24,7 +24,8 @@ function popolaHtmlConDispositivi( pagina ) {
         }
         conteggioDispositivi++;
         
-        elementoDispositivo += "<a href='./paginaDispositivo.html?"
+        if(gruppo!=4){
+            elementoDispositivo += "<a href='./paginaDispositivo.html?"
                             + "id="+dispositivi[i].ID+"'>"
                             + "<div class='dispositivi sfondoGrigioChiaro'>"
                             + "<h2 class='scrittaAzzurra centro nomeDispositivo'>" +dispositivi[i].Nome + "</h2>"
@@ -32,6 +33,23 @@ function popolaHtmlConDispositivi( pagina ) {
                             + " <h1 class='rosso centro'>" + dispositivi[i].Prezzo +   "</h1>"
                             + "</a>"
                             + "</div>";
+        }
+        else{
+            elementoDispositivo += "<a href='./paginaDispositivo.html?"
+                            + "id="+dispositivi[i].ID+"'>"
+                            + "<div class='dispositivi sfondoGrigioChiaro'>"
+                            + "<h2 class='scrittaAzzurra centro nomeDispositivo'>" +dispositivi[i].Nome + "</h2>"
+                            + "<img src='"+dispositivi[i].Immagine+"' alt='telefono' class='imgDispositivi'>"
+                            + "<span class='prezziPromozioni'>"
+                            + "<h2 class='rosso prezzo barrato'>"
+                            + dispositivi[i].Prezzo + "</h2>"
+                            + " <h1 class='rosso prezzo'>" + dispositivi[i].prezzoPromozione +   "</h1>"
+                            + "</span>"
+                            + "</a>"
+                            + "</div>";
+            
+        }
+        
         
         if ( conteggioDispositivi == numeroDispositiviPerRiga ) {
             conteggioDispositivi = 0;
@@ -72,7 +90,7 @@ function getFromDB(){
            
             $(".spanCambioPagina").html( elementoDispositivo );
             
-            popolaHtmlConDispositivi( 0 );
+            popolaHtmlConDispositivi( 0,idGruppo );
            
         },
         
