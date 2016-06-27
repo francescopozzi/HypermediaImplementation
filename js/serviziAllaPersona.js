@@ -19,7 +19,8 @@ function getFromDB(){
             var smartlife = JSON.parse(response);
             
             var elementoRiga = "";
-
+            var idDispositivo = "";
+            
            for(var i=0; i<smartlife.length; i++){
               
               if (smartlife[i].Applicazione == 1){
@@ -32,8 +33,11 @@ function getFromDB(){
                 +"</div>"
              }
                else {
+                   
+                   idDispositivo = getIDgiusto("#disp" + i, smartlife[i].ID);
+                   
                     elementoRiga +="<div class='prodottiServiziPersona'>"+
-                "<a href='./paginaDispositivo.html?id="+ smartlife[i].ID +"' class='nero'>" +
+                "<a href='./paginaDispositivo.html?id=' class='nero' id='disp" + i + "'>" +
                 "<img src='"+ smartlife[i].Immagine+"' class='immagineProdotto'>"
                 +"<br>"
                 +smartlife[i].Nome
@@ -54,4 +58,26 @@ function getFromDB(){
     });
        
 
+}
+
+
+function getIDgiusto(idHTML, idSmart){
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        data: {dispo:idSmart}, 
+        url: "http://progettohyp.altervista.org/php/getDispositivoperDispositivo.php", //Relative or absolute path to file.php file
+        success: function(response) {
+
+            console.log(JSON.parse(response));
+
+            var dispositivi = JSON.parse(response);
+   
+            var idDispo = "";
+            idDispo = dispositivi[0].ID;
+            
+            $(idHTML).attr("href", $(idHTML).attr("href") + idDispo);
+        }
+    });
 }
