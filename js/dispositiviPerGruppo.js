@@ -1,8 +1,7 @@
 $(document).ready(ready);
 function ready(){
-    
-    getFromDB();
 
+    getFromDB( [], [], [], [], [], [] );
    
 }
 
@@ -65,16 +64,25 @@ function popolaHtmlConDispositivi( pagina,gruppo ) {
     
 } 
 
-function getFromDB(){
+function getFromDB( tipologia_val, marca_val, so_val, prezzo_val, connessione_val, acquisto_val ){
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        data: {gruppo:idGruppo}, //è la variabile globale della pagina
+        data: {gruppo: idGruppo, tipologia: tipologia_val, marca: marca_val, so: so_val, prezzo: prezzo_val, connessione: connessione_val, acquisto: acquisto_val},
         url: "http://progettohyp.altervista.org/php/getDisPerGruppo.php", //Relative or absolute path to file.php file
         success: function(response) {
 
+            if ( response.length == 0 ) {
+                $(".spanCambioPagina").html();
+                $("#dinamico").html( "Nessun device con queste caratteristiche." );
+                return;
+            }
+
             console.log(JSON.parse(response));
+
+            //console.log( response );
+            //return;
 
             dispositivi = JSON.parse(response);
             

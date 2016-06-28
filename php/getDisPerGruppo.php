@@ -2,7 +2,13 @@
 
 header('Access-Control-Allow-Origin: *');
 
-$idGroup=$_POST["gruppo"];
+$idGroup = $_POST["gruppo"];
+$valTipologia = $_POST["tipologia"];
+$valMarca = $_POST["marca"];
+$valSo = $_POST["so"];
+$valPrezzo = $_POST["prezzo"];
+$valConnessione = $_POST["connessione"];
+$valAcquisto= $_POST["acquisto"];
 
 // Prende le credenziali da un altro php
 require_once("dbCredentials.php");
@@ -18,7 +24,39 @@ else {
     mysqli_set_charset($mysqli,"utf8");
     // connessione ok
     // seleziono tutti le assistenze highlights
+
     $query = " SELECT * FROM `Dispositivi` WHERE Gruppo = $idGroup";
+
+     if ( count( $valTipologia ) > 0 ) {
+        $valori = implode(",", $valTipologia);
+        $query .= " AND Tipologia IN (" . $valori . ")";
+    }
+
+    if ( count( $valMarca ) > 0 ) {
+        $valori = implode(",", $valMarca);
+        $query .= " AND Marca IN (" . $valori . ")";
+    }
+
+    if ( count( $valSo ) > 0 ) {
+        $valori = implode(",", $valSo);
+        $query .= " AND SistemaOperativo IN (" . $valori . ")";
+    }
+
+    if ( count( $valPrezzo ) > 0 ) {
+        $valori = implode(",", $valPrezzo);
+        $query .= " AND Prezzo IN (" . $valori . ")";
+    }
+
+    if ( count( $valConnessione ) > 0 ) {
+        $valori = implode(",", $valConnessione);
+        $query .= " AND Connessione IN (" . $valori . ")";
+    }
+
+    if ( count( $valAcquisto ) > 0 ) {
+        $valori = implode(",", $valAcquisto);
+        $query .= " AND Acquisto IN (" . $valori . ")";
+    }
+
     // esecuzione della query
     $result = $mysqli->query($query);
     // se ci sono risultati: li mette in array
@@ -32,8 +70,7 @@ else {
         // e quindi in json
         echo json_encode($myArray);
     }
-    //free result
-    $result->close();
+
     //close connection
     $mysqli->close();
 }

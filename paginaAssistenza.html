@@ -72,22 +72,6 @@
         $(function(){
             $("#getFooter").load("./HeaderFooter/footer.html");
             });
-        $(document).ready(function() {
-        	
-        	var slider = $('#light-slider').lightSlider({
-                
-                item:4,
-               
-                onSliderLoad: function() {
-                    $('#light-slider').removeClass('cS-hidden');
-               
-                }  
-            });
-           
-            $(document).ajaxStop(function () {
-           		slider.refresh();
-  			});
-        });
     </script>
    
 </body>

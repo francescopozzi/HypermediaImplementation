@@ -9,6 +9,19 @@ function ready(){
 
 }
 
+var immagini = 0;
+function aggiorna() {
+    immagini--;
+    if (immagini == 0) {
+        var slider = $('#light-slider').lightSlider({
+            item:4,
+            onSliderLoad: function() {
+                $('#light-slider').removeClass('cS-hidden');
+            }  
+        });
+    }
+}
+
 function getFromDB(identificativo){
     $.ajax({
         method: "POST",
@@ -59,11 +72,14 @@ function getDispositivi(identificativo){
             var dispositivi = JSON.parse(response);
             
             var slidebar = "";
-        
+            
+            immagini = dispositivi.length;
             for(var i=0; i<dispositivi.length; i++){
               slidebar += "<li class='centro'>"
-                        + "<img src='"+ dispositivi[i].Immagine + "'>"
+                        + "<a href='./paginaDispositivo.html?id=" + dispositivi[i].ID + "''>"
+                        + "<img src='"+ dispositivi[i].Immagine + "' onload=\"aggiorna();\">"
                         + "<h1 class='blu'>" + dispositivi[i].nome + "</h1>"
+                        + "</a>"
                         + "</li>";
             }
             
