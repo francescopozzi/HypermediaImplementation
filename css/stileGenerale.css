@@ -159,3 +159,16 @@ a{
 .linkDiv{
     display: block;
 }
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+
+    div#bordoInf{
+        position: fixed;
+    }
+
+    body{
+        padding-bottom: 100px;
+    }
+
+}
+
