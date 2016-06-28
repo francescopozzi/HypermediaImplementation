@@ -42,11 +42,6 @@ else {
         $query .= " AND SistemaOperativo IN (" . $valori . ")";
     }
 
-    if ( count( $valPrezzo ) > 0 ) {
-        $valori = implode(",", $valPrezzo);
-        $query .= " AND Prezzo IN (" . $valori . ")";
-    }
-
     if ( count( $valConnessione ) > 0 ) {
         $valori = implode(",", $valConnessione);
         $query .= " AND Connessione IN (" . $valori . ")";
@@ -59,6 +54,7 @@ else {
 
     // esecuzione della query
     $result = $mysqli->query($query);
+
     // se ci sono risultati: li mette in array
     if($result->num_rows > 0) {
 

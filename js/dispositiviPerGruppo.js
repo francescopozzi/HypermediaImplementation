@@ -5,7 +5,7 @@ function ready(){
    
 }
 
-var dispositivi                 = null;
+var dispositivi                 = [];
 var numeroDispositiviPerRiga    = 3;
 var numeroDispositiviPerPagina  = 9;
 
@@ -81,11 +81,40 @@ function getFromDB( tipologia_val, marca_val, so_val, prezzo_val, connessione_va
 
             console.log(JSON.parse(response));
 
-            //console.log( response );
+            console.log( response );
             //return;
 
-            dispositivi = JSON.parse(response);
-            
+            inizio = JSON.parse(response);
+            dispositivi = [];
+            for (var i = 0; i < inizio.length; i++) {
+                //console.log(inizio[i].Prezzo);
+                console.log(prezzo_val);
+                for (var j = 0; j < prezzo_val.length; j++) {
+                
+                if(prezzo_val[j] == "'<150'" && parseFloat(inizio[i].Prezzo)<150){
+                    dispositivi.push(inizio[i]);
+                }
+                if(prezzo_val[j] == "'150-300'" && parseFloat(inizio[i].Prezzo)>=150 && parseFloat(inizio[i].Prezzo)<300){
+                    dispositivi.push(inizio[i]);
+                }
+                if(prezzo_val[j] == "'300-400'" && parseFloat(inizio[i].Prezzo)>=300 && parseFloat(inizio[i].Prezzo)<=400){
+                    dispositivi.push(inizio[i]);
+                }
+                if (prezzo_val[j] == "'>400'" && parseFloat(inizio[i].Prezzo)>400){
+                    dispositivi.push(inizio[i]);
+                }
+                }
+            }
+
+            console.log(prezzo_val);
+            if (prezzo_val == ""){
+                for (var i = 0; i < inizio.length; i++) {
+                    dispositivi.push(inizio[i]);
+                }
+
+            }
+     
+     
             var numPagine = Math.ceil( dispositivi.length / numeroDispositiviPerPagina );
             
             
@@ -99,6 +128,7 @@ function getFromDB( tipologia_val, marca_val, so_val, prezzo_val, connessione_va
             $(".spanCambioPagina").html( elementoDispositivo );
             
             popolaHtmlConDispositivi( 0,idGruppo );
+
            
         },
         
