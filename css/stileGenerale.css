@@ -54,6 +54,19 @@ div#bordoInf {
     position: relative;
     top: 10px;
 }
+
+.welcome{
+    position: relative;
+    background: linear-gradient(#2F5F8F, #54AAFF);
+    width: 20%;
+}
+
+.autenticazione{
+        font-size: 20px;
+        margin-top: 40px;
+        color: orange;
+        font-weight: bold;
+}
 img#logo{
     margin-left: 0px;
     width: 280px;

@@ -91,8 +91,10 @@ function getDispositivi(identificativo){
             immagini = dispositivi.length;
             for(var i=0; i<dispositivi.length; i++){
               slidebar += "<li class='centro'>"
+                        + "<a href='./paginaDispositivo.html?id=" + dispositivi[i].ID + "''>"
                         + "<img src='"+ dispositivi[i].Immagine + "' onload=\"aggiorna();\">"
                         + "<h1 class='blu'>" + dispositivi[i].nome + "</h1>"
+                        + "</a>"
                         + "</li>";
             }
             

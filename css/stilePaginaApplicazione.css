@@ -4,6 +4,12 @@ body{
     width: 100%;
 }
 
+ul.largo{
+    width: 80%;
+    margin:auto;
+    
+}
+
 .clear {
     clear: both;
 }
