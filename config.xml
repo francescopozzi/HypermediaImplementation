@@ -107,9 +107,6 @@
         Define access to external domains.
 
         <access />            - a blank access tag denies access to all external resources.
-    -->
-        <access origin="*" /> 
-    <!--
         Otherwise, you can specify specific domains:
 
         <access origin="http://phonegap.com" />                    - allow any secure requests to http://phonegap.com/
@@ -123,6 +120,7 @@
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-intent href="*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
