@@ -43,7 +43,7 @@ function getFromDB(){
                 +"</a>"
                 +"</div>"
                }
-                //"<a href=\"./ass.html?id= + assistenze[i].id + "\" Ciao "
+               
             }
             
               

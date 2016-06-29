@@ -50,7 +50,7 @@ function getFromDB(identificativo){
             
             titolo += "" + smart[0].Titolo + "";
             
-            bottone +=  "<a href='./"+ getLinkCategoria(smart[0].Gruppo) +"' class='blu  categoria'>"+ getNomeCategoria(smart[0].Gruppo) + 
+            bottone +=  "<a href='./"+ getLinkCategoria(smart[0].Gruppo) +"' class='blu categoria'>"+ getNomeCategoria(smart[0].Gruppo) + 
                 "</a>";
             
             faq += "" + smart[0].FAQ + "";
@@ -144,7 +144,7 @@ function getLinkCategoria(id)
 {
   var nome = "";
   if(id == 0){
-    nome += "tv&Enter.html";
+    nome += "tv&enter.html";
   }
   else if(id == 1){
     nome += "serviziAllaPersona.html";
