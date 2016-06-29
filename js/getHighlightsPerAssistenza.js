@@ -2,18 +2,20 @@ $(document).ready(ready);
 function ready(){
 
     // è una funzione che chiama una funzione, qua non serve a niente
+    alert("Inizio");
     getFromDB();
-
+     alert("0");
 }
 
 function getFromDB(){
+    alert("1");
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "http://progettohyp.altervista.org/php/getHighlights.php", //Relative or absolute path to file.php file
         success: function(response) {
-
+             alert("2");
             console.log(JSON.parse(response));
 
             var assistenze = JSON.parse(response);
@@ -36,6 +38,7 @@ function getFromDB(){
         },
         error: function(request,error) 
         {
+             alert("3");
             console.log("Error");
         }
     });
