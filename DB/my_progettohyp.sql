@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Giu 29, 2016 alle 20:51
+-- Generation Time: Giu 30, 2016 alle 19:37
 -- Versione del server: 5.6.29-log
 -- PHP Version: 5.3.10
 
@@ -306,7 +306,7 @@ INSERT INTO `DispositiviSmartLife` (`ID`, `IDdisp`, `IDsl`) VALUES
 (1, 3, 3),
 (2, 0, 3),
 (3, 0, 0),
-(4, 0, 0),
+(4, 0, 5),
 (5, 0, 4),
 (6, 0, 6),
 (7, 19, 3),
